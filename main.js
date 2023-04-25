@@ -41,7 +41,7 @@ class View {
 class Search {
   constructor(view) {
     this.view = view;
-    this.view.input.addEventListener("keyup", this.debounce(this.searchRepositories.bind(this)), 2000);
+    this.view.input.addEventListener("keyup", this.debounce(this.searchRepositories.bind(this)), 500);
   }
   async searchRepositories() {
     const value = this.view.input.value;
