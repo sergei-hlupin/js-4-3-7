@@ -67,15 +67,15 @@ class Search {
       this.view.repositoriesList.removeChild(this.view.repositoriesList.firstChild);
     }
   }
-  debounce = (fn, debounceTime) => {
-    let timer;
+  debounce(fn, debounceTime) {
+    let timer = null;
     return function (...args) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         fn.apply(this, args);
       }, debounceTime);
     };
-  };
+  }
 }
 
 new Search(new View());
